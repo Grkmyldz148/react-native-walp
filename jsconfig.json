@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "navigation": ["./app/navigation"],
+        "_constants": ["./app/constants"],
+        "elements": ["./app/elements"],
+        "pages": ["./app/pages"]
+      }
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
