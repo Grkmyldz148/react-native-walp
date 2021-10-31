@@ -3,8 +3,10 @@
       "baseUrl": ".",
       "paths": {
         "navigation": ["./app/navigation"],
+        "components": ["./app/components"],
         "_constants": ["./app/constants"],
         "elements": ["./app/elements"],
+        "utils": ["./app/utils"],
         "pages": ["./app/pages"]
       }
     },

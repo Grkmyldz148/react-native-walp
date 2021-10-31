@@ -1,6 +1,7 @@
 import React from "react";
 import {
-    NavigationContainer
+    NavigationContainer,
+    DefaultTheme
 } from "@react-navigation/native";
 import {
     createStackNavigator
@@ -9,10 +10,14 @@ import {
     createBottomTabNavigator
 } from "@react-navigation/bottom-tabs";
 import {
+    BottomBar,
+} from "./components";
+import {
     ImageDetails,
     Information,
     Home
 } from "pages";
+import constants from "_constants";
 
 const HomeBottomTab = createBottomTabNavigator();
 const MainStack = createStackNavigator();
@@ -21,9 +26,18 @@ const screenOptions = {
     headerShown: false
 }
 
+const navigationTheme = {
+    ...DefaultTheme,
+    colors: {
+        ...DefaultTheme.colors,
+        background: constants.colors.pageColor,
+    },
+};
+
 const HomeNavigatior = () => {
     return <HomeBottomTab.Navigator
         screenOptions={screenOptions}
+        tabBar={props => <BottomBar  {...props} />}
     >
         <HomeBottomTab.Screen
             name="Home"
@@ -37,7 +51,9 @@ const HomeNavigatior = () => {
 }
 
 const Navigation = () => {
-    return <NavigationContainer>
+    return <NavigationContainer
+        theme={navigationTheme}
+    >
         <MainStack.Navigator
             screenOptions={screenOptions}
         >

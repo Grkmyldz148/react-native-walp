@@ -1,6 +1,7 @@
 import React from "react";
 import {
-    View
+    View,
+    Text
 } from "react-native";
 import {
     styles
@@ -9,7 +10,7 @@ const Information = () => {
     return <View
         style={styles.container}
     >
-
+        <Text>sa</Text>
     </View>
 }
 export default Information;

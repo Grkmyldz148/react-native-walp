@@ -5,5 +5,9 @@ import {
 export const styles = StyleSheet.create({
     container: {
         flex: 1
+    },
+    imageBackgroundContainer:{
+        width:"100%",
+        height:"100%"
     }
-})
+});
